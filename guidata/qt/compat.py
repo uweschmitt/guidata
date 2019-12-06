@@ -33,7 +33,7 @@ from guidata.py3compat import is_text_string, to_text_string, TEXT_TYPES
 
 PYQT_API_1 = False
 if os.environ['QT_API'] == 'pyqt':
-    import sip
+    from PyQt5 import sip
     try:
         PYQT_API_1 = sip.getapi('QVariant') == 1 # PyQt API #1
     except AttributeError:
